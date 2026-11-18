@@ -12,7 +12,7 @@
 
 [CmdletBinding()]
 param(
-  [string]$Owner = "HunYiSage",
+  [string]$Owner = "emperor016043-glitch",
   [string]$Repo  = "purge-x",
   [string]$Token = $env:GITHUB_TOKEN,
   [string]$Branch = "main",

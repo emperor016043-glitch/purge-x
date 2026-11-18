@@ -13,7 +13,7 @@
 
 [CmdletBinding()]
 param(
-  [string]$Owner = "HunYiSage",
+  [string]$Owner = "emperor016043-glitch",
   [string]$Repo  = "purge-x",
   [string]$Branch = "main",
   [string]$Proxy = "",
@@ -102,10 +102,10 @@ try {
   $remote = "https://github.com/$Owner/$Repo.git"
   $has = (git remote) -contains "origin"
   if ($has) { git remote set-url origin $remote } else { git remote add origin $remote }
-  git -c user.name="HunYiSage" -c user.email="HunYiSage@users.noreply.github.com" add -A
+  git -c user.name="emperor016043-glitch" -c user.email="emperor016043-glitch@users.noreply.github.com" add -A
   $pending = git status --porcelain
   if ($pending) {
-    git -c user.name="HunYiSage" -c user.email="HunYiSage@users.noreply.github.com" commit -q -m "purge-x: update before publish"
+    git -c user.name="emperor016043-glitch" -c user.email="emperor016043-glitch@users.noreply.github.com" commit -q -m "purge-x: update before publish"
     Write-Ok "补充提交"
   }
   git push -u origin $Branch 2>&1 | ForEach-Object { Write-Host "    $_" }

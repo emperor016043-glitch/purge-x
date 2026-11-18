@@ -38,10 +38,10 @@ WorkBuddy 侧整条链路实测在 **v5.9.2 / Electron 37.10.3** 上跑通；豆
 
 ```bash
 # 直接跑，不落依赖
-npx github:HunYiSage/purge-x targets
+npx github:emperor016043-glitch/purge-x targets
 
 # 或者克隆下来
-git clone https://github.com/HunYiSage/purge-x
+git clone https://github.com/emperor016043-glitch/purge-x
 cd purge-x
 node bin/purge-x.js targets
 ```

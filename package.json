@@ -48,11 +48,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HunYiSage/purge-x.git"
+    "url": "git+https://github.com/emperor016043-glitch/purge-x.git"
   },
-  "homepage": "https://github.com/HunYiSage/purge-x#readme",
+  "homepage": "https://github.com/emperor016043-glitch/purge-x#readme",
   "bugs": {
-    "url": "https://github.com/HunYiSage/purge-x/issues"
+    "url": "https://github.com/emperor016043-glitch/purge-x/issues"
   },
   "engines": {
     "node": ">=18.17"

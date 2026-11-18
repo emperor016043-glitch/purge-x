@@ -29,9 +29,9 @@ Verified on WorkBuddy **v5.9.2 / Electron 37.10.3**. The Doubao side rides the g
 ## Install
 
 ```bash
-npx github:HunYiSage/purge-x targets
+npx github:emperor016043-glitch/purge-x targets
 # or
-git clone https://github.com/HunYiSage/purge-x && cd purge-x
+git clone https://github.com/emperor016043-glitch/purge-x && cd purge-x
 node bin/purge-x.js targets
 ```
 
