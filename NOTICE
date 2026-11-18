@@ -1,0 +1,16 @@
+purge-x
+Copyright 2026 HunYiSage
+
+Derived from dsh-purge (Copyright 2026 HunYiSage, Apache-2.0),
+rewritten as a multi-host instruction-authority layer for
+WorkBuddy / CodeBuddy / Doubao desktop clients.
+
+Upstream: https://github.com/HunYiSage/dsh-purge (original repository, now offline)
+This work: https://github.com/HunYiSage/purge-x
+
+This product is licensed under the Apache License, Version 2.0.
+Derivative works must retain this NOTICE and attribution.
+
+Third-party names (WorkBuddy, CodeBuddy, Doubao, DeepSeek Harness) belong to
+their respective owners. purge-x is not affiliated with, endorsed by, or
+supported by any of them. It operates on local files the user owns.

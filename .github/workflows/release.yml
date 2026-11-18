@@ -1,0 +1,63 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "tag to publish (e.g. v2.0.0)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: self check
+        run: node scripts/check.mjs
+
+      - name: tests
+        run: npm test
+
+      - name: pack
+        run: |
+          npm pack --pack-destination dist
+          ls -l dist
+
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: purge-x-tarball
+          path: dist/*.tgz
+
+      - name: create release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag || github.ref_name }}
+          name: purge-x ${{ github.event.inputs.tag || github.ref_name }}
+          generate_release_notes: true
+          files: dist/*.tgz
+          body: |
+            ### Install
+
+            ```bash
+            npx github:HunYiSage/purge-x targets
+            ```
+
+            ### Targets
+
+            - WorkBuddy / CodeBuddy desktop (persona / skill / policy / deep)
+            - Doubao desktop (CDP launcher + renderer injection)
+
+            Everything is backed up to `~/.purge-x/backups/` before it is written.
+            `purge-x revert --target <name>` puts it back.

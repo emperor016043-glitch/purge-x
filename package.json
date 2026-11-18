@@ -1,0 +1,66 @@
+{
+  "name": "purge-x",
+  "version": "2.0.0",
+  "description": "跨宿主破甲插件：dsh-purge 的多目标改写版。给 WorkBuddy / CodeBuddy / 豆包桌面端装上同一套指令权威层——人格注入、锚点锁、审批放行、CDP 请求改写。",
+  "author": "HunYiSage",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./core/*": "./lib/core/*",
+    "./targets/*": "./lib/targets/*",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "purge-x": "bin/purge-x.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "presets",
+    "docs",
+    "scripts",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test": "node --test test/patch.test.mjs test/payload.test.mjs",
+    "targets": "node bin/purge-x.js targets"
+  },
+  "keywords": [
+    "purge-x",
+    "dsh-purge",
+    "workbuddy",
+    "codebuddy",
+    "doubao",
+    "豆包",
+    "prompt-inject",
+    "instruction-authority",
+    "anchor",
+    "llm-security",
+    "cdp",
+    "asar",
+    "red-team",
+    "agent"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HunYiSage/purge-x.git"
+  },
+  "homepage": "https://github.com/HunYiSage/purge-x#readme",
+  "bugs": {
+    "url": "https://github.com/HunYiSage/purge-x/issues"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "license": "Apache-2.0"
+}
